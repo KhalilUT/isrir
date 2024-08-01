@@ -84,7 +84,7 @@ test_dataset = tf.data.Dataset.from_tensor_slices((x_test, x_test)).batch(64)
 input_shape = (32, 32, 3)
 model = ConditionalDDPM(input_shape)
 model.compile(optimizer='adam')
-model.fit(train_dataset, epochs=10)
+model.fit(train_dataset, epochs=100)
 
 # Generate high-resolution images
 def generate_high_res_images(low_res_images, model, timesteps=1000):
